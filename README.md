@@ -1,27 +1,22 @@
-# Poetic Society Jaipur
+# Poetic Society Jaipur — GitHub Pages copy
 
-Standalone recovery of the browser-delivered Poetic Society Jaipur frontend.
+This is a static recovery of the browser-delivered frontend of the Poetic Society Jaipur site.
 
-## Run locally
-
-You can serve it with any static HTTP server. For Python:
-
-```bash
-python -m http.server 8000
-```
-
-Then open http://localhost:8000/
-
-## Deploy to GitHub Pages
+## Publish on GitHub Pages
 
 1. Create a GitHub repository.
-2. Upload **all files and folders in this repository**.
-3. On GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **GitHub Actions**.
-5. The included workflow will deploy the site.
+2. Upload **the contents of this folder** directly into the repository root.
+3. Commit to the `main` branch.
+4. Open **Settings → Pages**.
+5. Under **Build and deployment**, choose **Deploy from a branch**.
+6. Select `main` and `/ (root)`.
+7. Click **Save**.
+8. Wait for GitHub Pages to deploy.
 
-The image references in the recovered bundle have been made relative (`./images/...`) so the site also works when hosted as a project site such as `https://USERNAME.github.io/REPOSITORY/`.
+There is intentionally no GitHub Actions workflow in this version; the branch deployment is simpler and avoids workflow-permission issues.
 
 ## Important
 
-This is the browser-delivered frontend recovered from the live deployment. It is not Emergent's private server/backend source or the original pre-transpilation project files.
+The site is already compiled into `static/js/bundle.js`, so you do not need `npm install` or a build command.
+
+The `src-recovered` directory is included for reference; GitHub Pages serves `index.html` and the compiled bundle.
